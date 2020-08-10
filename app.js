@@ -4,7 +4,7 @@ const app = express();
 const date = require(__dirname + '/views/date.js');
 let items = [];
 let workItems = [];
-let dayInfo = date();
+let dayInfo = date.date();
 let day = dayInfo.day;
 let publishYear = dayInfo.year;
 
