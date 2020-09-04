@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const date = require(__dirname + '/views/date.js');
+const _ = require('lodash');
 
 mongoose.connect('mongodb://localhost:27017/todoListDB', {
   useNewUrlParser: true,
@@ -65,7 +66,7 @@ app.get('/', function(req, res) {
 });
 
 app.get("/:customListName", function(req, res) {
-  const customListName = req.params.customListName;
+  const customListName = _.capitalize(req.params.customListName);
   console.log(req.params);
   List.findOne({
     name: customListName
