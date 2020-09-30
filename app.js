@@ -5,7 +5,7 @@ const app = express();
 const date = require(__dirname + '/views/date.js');
 const _ = require('lodash');
 
-mongoose.connect('mongodb://localhost:27017/todoListDB', {
+mongoose.connect('mongodb+srv://admin-idahosound:EvanDavid1JackJoe4@cluster0.wbwdy.mongodb.net/toDoListDB?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
